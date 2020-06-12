@@ -1,0 +1,17 @@
+"""Collatz Sequences - The integer 22 appears in the first seq,
+so the two sequences will agree from this on.
+Sequences formed by this rule are called COLLATZ SEQUENCES
+"""
+
+seq = []
+a_number = int(input())
+seq = [a_number]
+while a_number > 1:
+    if a_number % 2 != 0:
+        seq.append(round(3 * a_number + 1))
+        a_number = round(3 * a_number + 1)
+    else:
+        seq.append(round(a_number / 2))
+        a_number = round(a_number / 2)
+
+print(seq)
