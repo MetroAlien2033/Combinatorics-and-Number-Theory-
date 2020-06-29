@@ -8,12 +8,19 @@ def comb(m,n):
     return comb
 
 #catalan number:
+
 cat_list = []
 i = 0
 for i in range(0,int(input("range?: "))):
     cat = int(comb(2*i,i)/(i+1))
     cat_list.append(cat)
     i =+ 1
-
 print(cat_list)
+# at what n?
+print(cat_list[int(input("n is?: "))])
+
+
+
+
+
     
