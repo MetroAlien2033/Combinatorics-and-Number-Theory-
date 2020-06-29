@@ -1,0 +1,19 @@
+import math
+def perm(m,n):
+    perm = math.factorial(m)/math.factorial(m-n)
+    return perm
+
+def comb(m,n):
+    comb = perm(m,n) / math.factorial(n)
+    return comb
+
+#catalan number:
+cat_list = []
+i = 0
+for i in range(0,int(input("range?: "))):
+    cat = int(comb(2*i,i)/(i+1))
+    cat_list.append(cat)
+    i =+ 1
+
+print(cat_list)
+    
