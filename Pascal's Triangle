@@ -1,0 +1,28 @@
+import math
+def perm(m,n):
+    perm = math.factorial(m)/math.factorial(m-n)
+    return perm
+
+def comb(m,n):
+    comb = perm(m,n) / math.factorial(n)
+    return comb 
+
+# pascal triangle -- single line
+n = int(input("n?: "))
+n = n+1
+def one_line(n):
+    i =  0
+    list_ = []
+    for i in range(n):
+        list_.append((comb(n,i)))
+        i =+1
+    list_.append(1.0)    
+    print(list_)
+
+#create triangle --- several lines
+j = 0 
+for j in range(0,n):
+    one_line(j)
+    j =+ 1
+  
+
